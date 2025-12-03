@@ -3,7 +3,7 @@ import { ArrowRight } from "lucide-react";
 
 const FeaturedBanner = () => {
   return (
-    <section className="relative bg-gradient-to-r from-primary via-emerald-700 to-primary overflow-hidden">
+    <section className="relative bg-gradient-to-r from-primary via-teal-600 to-primary overflow-hidden">
       {/* Background pattern */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute inset-0" style={{

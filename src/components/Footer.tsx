@@ -24,7 +24,7 @@ const Footer = () => {
               </Button>
               <Button variant="outline" size="xl" className="border-white/30 text-white hover:bg-white hover:text-foreground">
                 <Mail className="mr-2 h-5 w-5" />
-                hello@nourishpoint.com
+                hello@dailybodega.com
               </Button>
             </div>
           </div>
@@ -40,7 +40,7 @@ const Footer = () => {
             </p>
             <div className="mt-6 space-y-2 text-sm text-white/60">
               <div className="flex items-center gap-2"><Phone className="h-4 w-4" />(555) 123-4567</div>
-              <div className="flex items-center gap-2"><Mail className="h-4 w-4" />hello@nourishpoint.com</div>
+              <div className="flex items-center gap-2"><Mail className="h-4 w-4" />hello@dailybodega.com</div>
               <div className="flex items-center gap-2"><MapPin className="h-4 w-4" />Nationwide service</div>
             </div>
           </div>

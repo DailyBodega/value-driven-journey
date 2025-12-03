@@ -7,7 +7,7 @@ const PromoDeals = () => {
         {/* Main promo card */}
         <div className="grid lg:grid-cols-3 gap-6">
           {/* Big promo - left side */}
-          <div className="lg:col-span-2 bg-gradient-to-br from-primary to-emerald-700 rounded-3xl p-8 text-white relative overflow-hidden">
+          <div className="lg:col-span-2 bg-gradient-to-br from-primary via-teal-600 rounded-3xl p-8 text-white relative overflow-hidden">
             <div className="absolute top-0 right-0 w-64 h-64 bg-white/10 rounded-full -translate-y-1/2 translate-x-1/2" />
             <div className="absolute bottom-0 left-0 w-48 h-48 bg-white/5 rounded-full translate-y-1/2 -translate-x-1/2" />
             
