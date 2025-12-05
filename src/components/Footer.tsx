@@ -14,18 +14,17 @@ const Footer = () => {
             <h2 className="mb-6 font-display text-4xl font-bold">
               Let's Take Care of Your People
             </h2>
-            <p className="mb-8 text-lg text-white/70">
-              No pressure, no hard sell. Just a conversation about what your team needs.
-            </p>
             <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
               <Button size="xl" className="group">
                 Schedule Free Consultation
                 <ArrowRight className="ml-1 transition-transform group-hover:translate-x-1" />
               </Button>
-              <Button variant="outline" size="xl" className="border-white/30 text-white hover:bg-white hover:text-foreground">
-                <Mail className="mr-2 h-5 w-5" />
-                hello@dailybodega.com
-              </Button>
+              <a href="mailto:contact@dailybodega.com">
+                <Button variant="outline" size="xl" className="border-white/30 text-white hover:bg-white hover:text-foreground">
+                  <Mail className="mr-2 h-5 w-5" />
+                  contact@dailybodega.com
+                </Button>
+              </a>
             </div>
           </div>
         </div>
@@ -36,11 +35,11 @@ const Footer = () => {
           <div className="lg:col-span-2">
             <img src={dailyBodegaLogo} alt="Daily Bodega" className="h-12" />
             <p className="mt-4 max-w-md text-white/70">
-              We believe that when you invest in your people's wellbeing, everything else falls into place.
+              When you invest in your people's wellbeing, everything else falls into place.
             </p>
             <div className="mt-6 space-y-2 text-sm text-white/60">
-              <div className="flex items-center gap-2"><Phone className="h-4 w-4" />(555) 123-4567</div>
-              <div className="flex items-center gap-2"><Mail className="h-4 w-4" />hello@dailybodega.com</div>
+              <div className="flex items-center gap-2"><Phone className="h-4 w-4" />+1 (305) 304-8664</div>
+              <div className="flex items-center gap-2"><Mail className="h-4 w-4" />contact@dailybodega.com</div>
               <div className="flex items-center gap-2"><MapPin className="h-4 w-4" />Nationwide service</div>
             </div>
           </div>

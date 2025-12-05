@@ -14,23 +14,24 @@ const PromoDeals = () => {
             <div className="relative z-10">
               <div className="mb-4">
                 <span className="inline-block bg-accent text-white text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full">
-                  Limited Time
+                  Most Popular
                 </span>
               </div>
-              
+
               <div className="mb-2">
                 <span className="font-display text-6xl md:text-8xl font-black">FREE</span>
               </div>
               <h3 className="font-display text-2xl md:text-3xl font-bold mb-4">
-                First Month of Service
+                Essentials Package
               </h3>
               <p className="text-white/80 mb-6 max-w-md">
-                Sign up now and get your first month completely free. No commitment, just great service for your team.
+                Give residents access to essentials they rely on, with zero cost!
               </p>
-              <Button 
-                variant="glass" 
-                size="lg" 
+              <Button
+                variant="glass"
+                size="lg"
                 className="bg-white text-primary hover:bg-white/90 rounded-full px-8 font-bold"
+                onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
               >
                 Claim Offer
               </Button>
@@ -41,46 +42,46 @@ const PromoDeals = () => {
           <div className="space-y-6">
             {/* Product card 1 */}
             <div className="bg-secondary rounded-2xl p-6 flex gap-4 items-center">
-              <img 
+              <img
                 src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=150&h=150&fit=crop"
-                alt="Energy drinks"
+                alt="Drinks and snacks"
                 className="w-24 h-24 object-cover rounded-xl"
               />
               <div>
                 <span className="text-xs font-bold text-accent uppercase">Popular</span>
-                <h4 className="font-display font-bold text-lg">Energy Drink Bundle</h4>
-                <p className="text-sm text-muted-foreground mb-2">Stock up on team favorites</p>
-                <a href="#" className="text-primary font-semibold text-sm hover:underline">Shop Now →</a>
+                <h4 className="font-display font-bold text-lg">Drink & Snack Pack</h4>
+                <p className="text-sm text-muted-foreground mb-2">Stock up on classic favorites for free</p>
+                <a href="#contact" className="text-primary font-semibold text-sm hover:underline">Schedule Consultation →</a>
               </div>
             </div>
 
             {/* Product card 2 */}
             <div className="bg-secondary rounded-2xl p-6 flex gap-4 items-center">
-              <img 
+              <img
                 src="https://images.unsplash.com/photo-1604467794349-0b74285de7e7?w=150&h=150&fit=crop"
-                alt="Healthy snacks"
+                alt="Hygiene and wellness products"
                 className="w-24 h-24 object-cover rounded-xl"
               />
               <div>
                 <span className="text-xs font-bold text-primary uppercase">Healthy</span>
-                <h4 className="font-display font-bold text-lg">Wellness Pack</h4>
-                <p className="text-sm text-muted-foreground mb-2">Better-for-you options</p>
-                <a href="#" className="text-primary font-semibold text-sm hover:underline">Shop Now →</a>
+                <h4 className="font-display font-bold text-lg">Hygiene & Wellness Bundle</h4>
+                <p className="text-sm text-muted-foreground mb-2">Instant access to must-haves</p>
+                <a href="#contact" className="text-primary font-semibold text-sm hover:underline">Schedule Consultation →</a>
               </div>
             </div>
 
             {/* Product card 3 */}
             <div className="bg-secondary rounded-2xl p-6 flex gap-4 items-center">
-              <img 
+              <img
                 src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=150&h=150&fit=crop"
-                alt="Coffee"
+                alt="Premium convenience"
                 className="w-24 h-24 object-cover rounded-xl"
               />
               <div>
                 <span className="text-xs font-bold text-amber-600 uppercase">New</span>
-                <h4 className="font-display font-bold text-lg">Premium Coffee</h4>
-                <p className="text-sm text-muted-foreground mb-2">Fresh cold brew daily</p>
-                <a href="#" className="text-primary font-semibold text-sm hover:underline">Shop Now →</a>
+                <h4 className="font-display font-bold text-lg">Premium Convenience</h4>
+                <p className="text-sm text-muted-foreground mb-2">Complete convenience for modern living</p>
+                <a href="#contact" className="text-primary font-semibold text-sm hover:underline">Schedule Consultation →</a>
               </div>
             </div>
           </div>

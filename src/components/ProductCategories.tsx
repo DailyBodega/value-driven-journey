@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Coffee, Apple, Sparkles, Pill, User, Smartphone, ChevronRight } from "lucide-react";
+import { Coffee, Apple, Pill, User, Smartphone, ChevronRight } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 
@@ -15,8 +15,7 @@ interface Category {
 
 const categories: Category[] = [
   { id: "drinks", icon: <Coffee className="h-8 w-8" />, title: "Drinks", tagline: "Stay refreshed", description: "Energy drinks, cold brew, sparkling water, and more.", items: ["Bottled Water", "Energy Drinks", "Cold Brew Coffee", "Protein Shakes", "Sparkling Water", "Premium Teas"], bgColor: "bg-blue-500" },
-  { id: "snacks", icon: <Apple className="h-8 w-8" />, title: "Snacks", tagline: "Satisfy cravings", description: "All your favorite treats ready when you need them.", items: ["Premium Chips", "Candy Bars", "Fresh Cookies", "Popcorn", "Beef Jerky", "Pastries"], bgColor: "bg-amber-500" },
-  { id: "healthy", icon: <Sparkles className="h-8 w-8" />, title: "Better-For-You", tagline: "Fuel that feels good", description: "Healthy options for the health-conscious.", items: ["Protein Bars", "Trail Mix", "Dried Fruit", "Veggie Chips", "Greek Yogurt", "Hard-Boiled Eggs"], bgColor: "bg-green-500" },
+  { id: "snacks", icon: <Apple className="h-8 w-8" />, title: "Snacks", tagline: "Satisfy cravings", description: "All your favorite treats ready when you need them.", items: ["Premium Chips", "Candy Bars", "Fresh Cookies", "Protein Bars", "Beef Jerky", "Other Sweet & Savory Snacks"], bgColor: "bg-amber-500" },
   { id: "health", icon: <Pill className="h-8 w-8" />, title: "Health Essentials", tagline: "Relief when needed", description: "Quick relief so no one has to leave.", items: ["Pain Relievers", "Allergy Medicine", "Cold Relief", "Digestive Aids", "First Aid", "Immune Support"], bgColor: "bg-red-500" },
   { id: "personal", icon: <User className="h-8 w-8" />, title: "Personal Care", tagline: "Be prepared", description: "Life happens. We've got your back.", items: ["Toothbrush", "Deodorant", "Hand Sanitizer", "Lip Balm", "Hair Ties", "Feminine Products"], bgColor: "bg-pink-500" },
   { id: "tech", icon: <Smartphone className="h-8 w-8" />, title: "Tech & Essentials", tagline: "Stay connected", description: "Keep your team powered up.", items: ["Phone Chargers", "Earbuds", "Batteries", "Screen Cleaners", "USB Cables", "Tissues"], bgColor: "bg-purple-500" },
@@ -86,7 +85,11 @@ const ProductCategories = () => {
                   </div>
                 ))}
               </div>
-              <Button variant="glass" size="lg">
+              <Button
+                variant="glass"
+                size="lg"
+                onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
+              >
                 Learn More <ChevronRight className="ml-1 h-4 w-4" />
               </Button>
             </div>

@@ -1,17 +1,14 @@
 import { useEffect, useState, useRef } from "react";
-import { TrendingUp, Users, Clock, Smile, Coffee, Heart } from "lucide-react";
+import { TrendingUp, Users, Clock, Smile, ShoppingCart, Home } from "lucide-react";
 
 interface StatCardProps {
   icon: React.ReactNode;
-  value: number;
-  suffix?: string;
-  prefix?: string;
+  displayValue: string;
   label: string;
   description: string;
 }
 
-const StatCard = ({ icon, value, suffix = "", prefix = "", label, description }: StatCardProps) => {
-  const [count, setCount] = useState(0);
+const StatCard = ({ icon, displayValue, label, description }: StatCardProps) => {
   const [isVisible, setIsVisible] = useState(false);
   const ref = useRef<HTMLDivElement>(null);
 
@@ -23,32 +20,14 @@ const StatCard = ({ icon, value, suffix = "", prefix = "", label, description }:
     return () => observer.disconnect();
   }, []);
 
-  useEffect(() => {
-    if (!isVisible) return;
-    const duration = 2000;
-    const steps = 60;
-    const stepValue = value / steps;
-    let current = 0;
-    const timer = setInterval(() => {
-      current += stepValue;
-      if (current >= value) {
-        setCount(value);
-        clearInterval(timer);
-      } else {
-        setCount(Math.floor(current));
-      }
-    }, duration / steps);
-    return () => clearInterval(timer);
-  }, [isVisible, value]);
-
   return (
-    <div ref={ref} className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow border border-border">
+    <div ref={ref} className={`bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all border border-border ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
       <div className="mb-4 inline-flex h-14 w-14 items-center justify-center rounded-full bg-primary/10 text-primary">
         {icon}
       </div>
       <div className="mb-2">
         <span className="font-display text-4xl font-bold text-foreground">
-          {prefix}{count.toLocaleString()}{suffix}
+          {displayValue}
         </span>
       </div>
       <h3 className="mb-2 font-display text-lg font-semibold text-foreground">{label}</h3>
@@ -59,12 +38,12 @@ const StatCard = ({ icon, value, suffix = "", prefix = "", label, description }:
 
 const ImpactStats = () => {
   const stats = [
-    { icon: <Users className="h-6 w-6" />, value: 127500, label: "People Served Daily", description: "Employees who rely on us for daily fuel." },
-    { icon: <TrendingUp className="h-6 w-6" />, value: 23, suffix: "%", label: "Productivity Boost", description: "Average increase in workplace productivity." },
-    { icon: <Smile className="h-6 w-6" />, value: 94, suffix: "%", label: "Employee Satisfaction", description: "Workers feel more valued with quality options." },
-    { icon: <Clock className="h-6 w-6" />, value: 45, label: "Minutes Saved Daily", description: "Time saved per employee on average." },
-    { icon: <Coffee className="h-6 w-6" />, value: 89, suffix: "%", label: "Healthy Options Chosen", description: "People choose healthier when available." },
-    { icon: <Heart className="h-6 w-6" />, value: 500, suffix: "+", label: "Happy Partners", description: "Organizations trust us with their people." },
+    { icon: <Users className="h-6 w-6" />, displayValue: "10M+", label: "Daily Users", description: "Americans using self-checkout every day." },
+    { icon: <TrendingUp className="h-6 w-6" />, displayValue: "165M", label: "Daily Convenience Visits", description: "U.S. convenience-store visits per day." },
+    { icon: <ShoppingCart className="h-6 w-6" />, displayValue: "73%", label: "Prefer Self-Checkout", description: "Most shoppers choose self-checkout and use it every day." },
+    { icon: <Clock className="h-6 w-6" />, displayValue: "< 4 Minutes", label: "Typical Errand Time", description: "A convenience shopper is done in under 4 minutes." },
+    { icon: <Smile className="h-6 w-6" />, displayValue: "57%", label: "Will Pay More for One-Stop Access", description: "Consumers pay more for quick, one-stop buying." },
+    { icon: <Home className="h-6 w-6" />, displayValue: "88%", label: "Residents Want Time-Saving Amenities", description: "Most renters want amenities that save time." },
   ];
 
   return (
@@ -75,10 +54,10 @@ const ImpactStats = () => {
             Our Impact
           </span>
           <h2 className="mb-4 font-display text-4xl font-bold text-foreground">
-            Numbers That Matter
+            Convenience Matters
           </h2>
           <p className="text-lg text-muted-foreground">
-            We measure success in lives improved, not machines placed.
+            Residents already live in a convenience economy. We bring it downstairs.
           </p>
         </div>
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">

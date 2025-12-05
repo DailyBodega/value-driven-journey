@@ -5,9 +5,9 @@ import PromoDeals from "@/components/PromoDeals";
 import FeaturedBanner from "@/components/FeaturedBanner";
 import ImpactStats from "@/components/ImpactStats";
 import ProductCategories from "@/components/ProductCategories";
-import Testimonials from "@/components/Testimonials";
+// import Testimonials from "@/components/Testimonials"; // Hidden for later use
 import ValueGraph from "@/components/ValueGraph";
-import SocialStoreLocator from "@/components/SocialStoreLocator";
+// import SocialStoreLocator from "@/components/SocialStoreLocator"; // Hidden for later use
 import Footer from "@/components/Footer";
 
 const Index = () => {
@@ -21,8 +21,8 @@ const Index = () => {
       <ProductCategories />
       <ImpactStats />
       <ValueGraph />
-      <Testimonials />
-      <SocialStoreLocator />
+      {/* <Testimonials /> */}{/* Hidden for later use */}
+      {/* <SocialStoreLocator /> */}{/* Hidden for later use */}
       <Footer />
     </main>
   );

@@ -3,12 +3,16 @@ import { Button } from "@/components/ui/button";
 import hygieneHeader from "@/assets/hygiene-header.webp";
 import snacksHeader from "@/assets/snacks-header.png";
 import otcHeader from "@/assets/otc-header.png";
+import drinksHeader from "@/assets/drinks.webp";
+import techHeader from "@/assets/tech.webp";
 import dailyBodegaLogo from "@/assets/daily-bodega-logo.png";
 
 const productImages = [
   { src: snacksHeader, alt: "Snacks and treats - chips, candy, protein bars and more", label: "Snacks" },
   { src: hygieneHeader, alt: "Personal care and hygiene products - shampoo, toothpaste, deodorant", label: "Hygiene" },
   { src: otcHeader, alt: "Wellness products and essentials", label: "Wellness" },
+  { src: drinksHeader, alt: "Drinks - water, energy drinks, coffee and beverages", label: "Drinks" },
+  { src: techHeader, alt: "Tech accessories - chargers, earbuds, cables and more", label: "Tech" },
 ];
 
 const Hero = () => {
@@ -45,21 +49,22 @@ const Hero = () => {
             
             {/* Main headline with script font */}
             <h1 className="mb-6 text-4xl md:text-5xl lg:text-6xl font-black leading-tight">
-              <span className="font-script">Fuel Your Team,</span>
+              <span className="font-script">Less Friction,</span>
               <br />
-              <span className="font-display">Every Day</span>
+              <span className="font-display">More Satisfaction</span>
             </h1>
-            
+
             <p className="mb-8 text-lg text-white/90">
-              Premium snacks, drinks, and essentials at your convenience. Because your team deserves the best.
+              The amenity residents feel, every day.
             </p>
-            
-            <Button 
-              variant="glass" 
-              size="lg" 
+
+            <Button
+              variant="glass"
+              size="lg"
               className="bg-white text-foreground hover:bg-white/90 rounded-full px-8 font-bold shadow-lg"
+              onClick={() => document.getElementById('products')?.scrollIntoView({ behavior: 'smooth' })}
             >
-              Shop Now
+              Explore
             </Button>
           </div>
 

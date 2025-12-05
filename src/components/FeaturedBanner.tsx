@@ -18,18 +18,20 @@ const FeaturedBanner = () => {
               Partner Program
             </span>
             <h2 className="font-display text-4xl md:text-5xl font-bold mb-4">
-              Fuel Up &<br />Save Big
+              Diverse Needs?
             </h2>
             <p className="text-white/80 text-lg mb-6 max-w-md">
-              Join our rewards program and unlock exclusive discounts, early access to new products, and premium support for your workplace.
+              For portfolios with unique requirements, we deliver tailored solutions across multiple locations to achieve optimal alignment.
             </p>
             <div className="flex flex-wrap gap-4">
-              <Button variant="glass" size="lg" className="bg-white text-primary hover:bg-white/90 group">
-                Join Now
-                <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
-              </Button>
-              <Button variant="outline" size="lg" className="border-white text-white hover:bg-white hover:text-primary">
+              <Button
+                variant="glass"
+                size="lg"
+                className="bg-white text-primary hover:bg-white/90 group"
+                onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
+              >
                 Learn More
+                <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
               </Button>
             </div>
           </div>
@@ -38,8 +40,8 @@ const FeaturedBanner = () => {
             <div className="relative">
               <div className="w-72 h-72 bg-white/10 rounded-full absolute -top-8 -right-8" />
               <div className="w-64 h-64 bg-white rounded-3xl shadow-2xl flex flex-col items-center justify-center p-8 relative">
-                <p className="font-display text-6xl font-bold text-primary mb-2">25%</p>
-                <p className="text-center text-muted-foreground font-semibold">Average savings for partners</p>
+                <p className="font-display text-6xl font-bold text-primary mb-2">81%</p>
+                <p className="text-center text-muted-foreground font-semibold">of renters prefer on-site access to essentials</p>
               </div>
             </div>
           </div>
