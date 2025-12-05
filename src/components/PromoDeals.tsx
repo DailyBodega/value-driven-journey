@@ -1,4 +1,7 @@
 import { Button } from "@/components/ui/button";
+import drinksImg from "@/assets/drinks.jpg";
+import hygieneImg from "@/assets/hygine.jpg";
+import convenienceImg from "@/assets/convinience.jpg";
 
 const PromoDeals = () => {
   return (
@@ -43,7 +46,7 @@ const PromoDeals = () => {
             {/* Product card 1 */}
             <div className="bg-secondary rounded-2xl p-6 flex gap-4 items-center">
               <img
-                src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=150&h=150&fit=crop"
+                src={drinksImg}
                 alt="Drinks and snacks"
                 className="w-24 h-24 object-cover rounded-xl"
               />
@@ -58,7 +61,7 @@ const PromoDeals = () => {
             {/* Product card 2 */}
             <div className="bg-secondary rounded-2xl p-6 flex gap-4 items-center">
               <img
-                src="https://images.unsplash.com/photo-1604467794349-0b74285de7e7?w=150&h=150&fit=crop"
+                src={hygieneImg}
                 alt="Hygiene and wellness products"
                 className="w-24 h-24 object-cover rounded-xl"
               />
@@ -73,7 +76,7 @@ const PromoDeals = () => {
             {/* Product card 3 */}
             <div className="bg-secondary rounded-2xl p-6 flex gap-4 items-center">
               <img
-                src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=150&h=150&fit=crop"
+                src={convenienceImg}
                 alt="Premium convenience"
                 className="w-24 h-24 object-cover rounded-xl"
               />
