@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Coffee, Apple, Pill, User, Smartphone, ChevronRight } from "lucide-react";
+import { Coffee, Apple, Pill, User, Smartphone, ChevronRight, UtensilsCrossed } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 
@@ -19,6 +19,7 @@ const categories: Category[] = [
   { id: "health", icon: <Pill className="h-8 w-8" />, title: "Health Essentials", tagline: "Relief when needed", description: "Quick relief so no one has to leave.", items: ["Pain Relievers", "Allergy Medicine", "Cold Relief", "Digestive Aids", "First Aid", "Immune Support"], bgColor: "bg-red-500" },
   { id: "personal", icon: <User className="h-8 w-8" />, title: "Personal Care", tagline: "Be prepared", description: "Life happens. We've got your back.", items: ["Toothbrush", "Deodorant", "Hand Sanitizer", "Lip Balm", "Hair Ties", "Feminine Products"], bgColor: "bg-pink-500" },
   { id: "tech", icon: <Smartphone className="h-8 w-8" />, title: "Tech & Essentials", tagline: "Stay connected", description: "Keep your team powered up.", items: ["Phone Chargers", "Earbuds", "Batteries", "Screen Cleaners", "USB Cables", "Tissues"], bgColor: "bg-purple-500" },
+  { id: "meals", icon: <UtensilsCrossed className="h-8 w-8" />, title: "Meals", tagline: "Quick & delicious", description: "Hot, satisfying meals ready in minutes.", items: ["Burritos & Chimichangas", "Breakfast Sandwiches", "Instant Noodles & Ramen", "Pizza Snacks", "Pasta Meals & Bowls", "Mac & Cheese", "Taquitos", "Rice Meals & Protein Bowls", "Soups", "Oatmeal", "Grain Bowls", "Mashed Potatoes"], bgColor: "bg-orange-500" },
 ];
 
 const ProductCategories = () => {
