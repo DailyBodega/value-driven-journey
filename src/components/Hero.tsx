@@ -4,8 +4,8 @@ import hygieneHeader from "@/assets/hygiene-header.webp";
 import snacksHeader from "@/assets/snacks-header.png";
 import otcHeader from "@/assets/otc-header.png";
 import drinksHeader from "@/assets/drinks.webp";
-import techHeader from "@/assets/tech.webp";
-import mealsHeader from "@/assets/meals.jpg";
+import techHeader from "@/assets/tech2.png";
+import mealsHeader from "@/assets/meals.png";
 import dailyBodegaLogo from "@/assets/daily-bodega-logo.png";
 
 const productImages = [
